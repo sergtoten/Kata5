@@ -1,9 +1,11 @@
 # KATA5
 
 #### - OBJETIVOS
-La quinta kata introduce comunicación en tiempo real desde el lado servidor. El objetivo es
-construir un servidor pequeño que permita crear o listar salas mediante HTTP y enviar mensajes
-de chat mediante sockets o WebSocket.
+La quinta kata tiene como objetivo Usar NGINX como punto de entrada. Cada ruta pública dirige las peticiones a un grupo de
+réplicas, definido mediante un bloque upstream. Consul registra las réplicas, comprueba su salud
+y permite descubrirlas.
+Comprobar cómo cambia el reparto al detener e incorporar réplicas mientras el cliente sigue
+usando las mismas URL.
 
 #### - CÓMO COMPILAR Y EJECUTAR
 Primeramente el grupo de contenedores debe estar levantado, segundo se debe de haber creado el paquete `jar` que permitirá ejecutar los comandos que lanza el hilo
